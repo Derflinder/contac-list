@@ -86,7 +86,42 @@ function actualizarLista() {
   }
 }
 
+
+
 actualizarLista();
+
+function actualizarContacto() {
+  let id = document.getElementById("id").value;
+  let nombres = document.getElementById("nombres").value;
+  let apellidos = document.getElementById("apellidos").value;
+  let telefono = document.getElementById("telefono").value;
+  let ubicaciones = document.getElementById("ubicaciones").value.split(",");
+  let ciudad = document.getElementById("ciudad").value;
+  let direccion = document.getElementById("direccion").value;
+
+  if (id && nombres && apellidos && telefono && ubicaciones && ciudad && direccion) {
+    for (let i = 0; i < contactos.length; i++) {
+      if (contactos[i].id == id) {
+        contactos[i].nombres = nombres;
+        contactos[i].apellidos = apellidos;
+        contactos[i].telefono = telefono;
+        contactos[i].ubicaciones = ubicaciones;
+        contactos[i].ciudad = ciudad;
+        contactos[i].direccion = direccion;
+        break;
+      }
+    }
+    document.getElementById("id").value = "";
+    document.getElementById("nombres").value = "";
+    document.getElementById("apellidos").value = "";
+    document.getElementById("telefono").value = "";
+    document.getElementById("ubicaciones").value = "";
+    document.getElementById("ciudad").value = "";
+    document.getElementById("direccion").value = "";
+    actualizarLista();
+  }
+}
+
 
 function imprimirContactos() {
   for (let i = 0; i < contactos.length; i++) {
