@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lista de contactos</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lista de contactos</h1>
+      <form class="form-buttons">
+        <label for="id">ID:</label>
+        <input type="text" id="id">
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres">
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos">
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono">
+        <label for="ubicaciones">Ubicaciones:</label>
+        <input type="text" id="ubicaciones">
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion">
+        <button type="button" class="guardar-contacto" onclick="agregarContacto()">Guardar contacto</button>
+      </form>
+      <div id="lista"></div>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>
